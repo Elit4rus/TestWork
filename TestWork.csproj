@@ -63,8 +63,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AppDate\FrameHelper.cs" />
-    <Compile Include="View\AuthorizationTeacherPage.xaml.cs">
-      <DependentUpon>AuthorizationTeacherPage.xaml</DependentUpon>
+    <Compile Include="View\AuthorizationTeacherWindow.xaml.cs">
+      <DependentUpon>AuthorizationTeacherWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\PageAddGroup.xaml.cs">
       <DependentUpon>PageAddGroup.xaml</DependentUpon>
@@ -90,7 +90,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\AuthorizationTeacherPage.xaml">
+    <Page Include="View\AuthorizationTeacherWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -112,33 +112,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Group.cs">
-      <DependentUpon>ModelTest.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Journal.cs">
-      <DependentUpon>ModelTest.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ModelTest.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelTest.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ModelTest.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelTest.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ModelTest.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelTest.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Student.cs">
-      <DependentUpon>ModelTest.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Test.cs">
-      <DependentUpon>ModelTest.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -156,13 +129,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Model\ModelTest.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelTest.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Model\ModelTest.edmx.diagram">
-      <DependentUpon>ModelTest.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -173,20 +139,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\ModelTest.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModelTest.Context.cs</LastGenOutput>
-      <DependentUpon>ModelTest.edmx</DependentUpon>
-    </Content>
-    <Content Include="Model\ModelTest.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelTest.edmx</DependentUpon>
-      <LastGenOutput>ModelTest.cs</LastGenOutput>
-    </Content>
     <Resource Include="Шеврон.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

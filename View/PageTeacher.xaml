@@ -8,8 +8,7 @@
       d:DesignHeight="270" d:DesignWidth="700"
       Title="PageTeacher" Background="White">
 
-    <Grid Margin="20"
-          >
+    <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="10"/>
@@ -21,7 +20,9 @@
             <RowDefinition Height="10"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        
+
+        <Frame x:Name="SecondFrame" NavigationUIVisibility="Hidden" Grid.RowSpan="7"/>
+
         <Button Name="AddStudent" Content="Добавить студента" Click="AddStudent_Click"/>
         
         <Button Name="AddGroupBtn" Content="Добавить группу" Grid.Row="2" Click="AddGroupBtn_Click"/>
